@@ -65,7 +65,7 @@ const projects = [
     title: "Significo",
     description: "Created a clone of the Significo website to showcase my skills in HTML, CSS, and JavaScript. This project demonstrates attention to design details, smooth animations, and a solid understanding of frontend development techniques for modern web applications.",
     techDescription: "This project showcases my skills in HTML, CSS, JavaScript, GSAP, and Locomotive JS, focusing on design precision, fluid motion, and advanced frontend development techniques.",
-    videoUrl: "/assets/significo.mp4", 
+    videoUrl: "/assets/Significo.mp4", 
     isLocal: true,
   },
   {
@@ -123,7 +123,7 @@ const Work = () => {
                     <video
                       src={project.videoUrl}
                       title={project.title}
-                      className="absolute top-0 left-0 w-full h-full object-cover"
+                      className="absolute top-0 left-0 object-cover w-full h-full"
                       autoPlay
                       loop
                       muted
