@@ -2,6 +2,8 @@ import Social from "@/components/Social";
 import { Button } from "@/components/ui/button";
 import {FiDownload} from "react-icons/fi";
 import Photo from "@/components/Photo";
+import Link from "next/link";
+
 const Home = () => {
   return (
     <section className="h-full">
@@ -20,10 +22,12 @@ const Home = () => {
                {/* btn and socials*/}
                <div className="flex flex-col items-center gap-8 xl:flex-row">
 
-                  <Button variant="outline" size="lg" className="flex items-center gap-2 uppercase transition-all duration-300 border-accent text-accent hover:bg-accent hover:text-primary">
-                     <span>Download CV</span>
-                     <FiDownload className = "text-xl"/>
-                  </Button>
+                  <Link href="/assets/resume/ResumeFolder/resume.pdf" download="Citiz_Shrestha_Resume.pdf" target="_blank">
+                    <Button variant="outline" size="lg" className="flex items-center gap-2 uppercase transition-all duration-300 border-accent text-accent hover:bg-accent hover:text-primary">
+                       <span>Download Resume</span>
+                       <FiDownload className = "text-xl"/>
+                    </Button>
+                  </Link>
                   <div className="mb-8 xl:mb-0">
                      <Social 
                      containerStyles="flex gap-6" 
