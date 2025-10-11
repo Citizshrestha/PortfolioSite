@@ -128,7 +128,7 @@ const Contacts = () => {
       <div className="container mx-auto px-4 py-4 flex-1 flex flex-col">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8 flex-1">
           {/* Left Part - Contact Info */}
-          <div className="flex flex-col justify-center space-y-3">
+          <div className="flex flex-col justify-center space-y-3 text-center lg:text-left">
             <h2 className="text-3xl lg:text-4xl font-semibold text-accent">Available for freelance opportunities</h2>
             <p className="text-base lg:text-lg text-foreground/80">
               Have an exciting project you need help with?
@@ -136,11 +136,11 @@ const Contacts = () => {
             <p className="text-base lg:text-lg text-foreground/80">
               Send me an email or contact me via instant message!
             </p>
-            <div className="flex items-center gap-3 pt-1">
+            <div className="flex items-center gap-3 pt-1 justify-center lg:justify-start">
               <Mail className="w-6 h-6 text-accent" />
               <a 
                 href="mailto:citizshresthaa@gmail.com" 
-                className="text-xl text-accent hover:underline transition-all"
+                className="text-xl text-accent hover:underline transition-all break-all"
               >
                 citizshresthaa@gmail.com
               </a>
