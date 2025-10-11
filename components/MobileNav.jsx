@@ -4,7 +4,6 @@ import {Sheet, SheetContent, SheetTitle, SheetTrigger} from "@/components/ui/she
 import { usePathname } from "next/navigation";
 import Link from "next/link";
 import {CiMenuFries} from "react-icons/ci";
-import ThemeToggle from './ThemeToggle';
 
 const links = [
   { name: "home", path: "/" },
@@ -47,10 +46,6 @@ const MobileNav = () => {
               </Link>
             );
           })}
-          {/* Theme Toggle */}
-          <div className="mt-8">
-            <ThemeToggle />
-          </div>
         </nav>
       </SheetContent>
     </Sheet>

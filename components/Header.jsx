@@ -8,7 +8,7 @@ import ThemeToggle from './ThemeToggle';
 
 const Header = () => {
   return (
-    <header className="sticky top-0 z-50 px-10 py-6 transition-colors duration-300 border-b xl:py-8" style={{backgroundColor: 'var(--background)', borderColor: 'var(--border)'}}>
+    <header className="sticky top-0 z-50 px-4 py-4 transition-colors duration-300 border-b sm:px-6 md:px-10 xl:py-8" style={{backgroundColor: 'var(--background)', borderColor: 'var(--border)'}}>
       <div className="container flex items-center justify-between mx-auto">
         {/* Logo */}
         <Link href="/">
@@ -29,7 +29,8 @@ const Header = () => {
         </div>
 
         {/* Mobile Navigation */}
-        <div className="xl:hidden">
+        <div className="flex items-center gap-4 xl:hidden">
+          <ThemeToggle />
           <MobileNav/>
         </div>
       </div>
