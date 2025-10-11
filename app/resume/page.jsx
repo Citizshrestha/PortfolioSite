@@ -179,51 +179,51 @@ const Resume = () => {
       }}
       className="flex items-center justify-center min-h-screen py-12 xl:py-0"
     >
-      <div className="container px-4 mx-auto sm:px-6 lg:px-10">
+      <div className="container px-4 mx-auto sm:px-6 lg:px-10 max-w-7xl">
         <Tabs
           defaultValue="experience"
           className="flex flex-col xl:flex-row gap-8 xl:gap-[60px]"
         >
-          <TabsList className="flex flex-row xl:flex-col w-full max-w-full xl:max-w-[380px] xl:h-fit mb-10 mx-auto xl:mx-0 gap-2 xl:gap-4 overflow-x-auto xl:self-start">
-            <TabsTrigger value="experience" className="flex-1 xl:w-full whitespace-nowrap">Experience</TabsTrigger>
-            <TabsTrigger value="education" className="flex-1 xl:w-full whitespace-nowrap">Education</TabsTrigger>
-            <TabsTrigger value="skills" className="flex-1 xl:w-full whitespace-nowrap">Skills</TabsTrigger>
-            <TabsTrigger value="about" className="flex-1 xl:w-full whitespace-nowrap">My Info</TabsTrigger>
+          <TabsList className="flex flex-row xl:flex-col w-full max-w-full xl:max-w-[380px] xl:h-fit mb-6 sm:mb-10 mx-auto xl:mx-0 gap-2 xl:gap-4 overflow-x-auto xl:self-start">
+            <TabsTrigger value="experience" className="flex-1 xl:w-full whitespace-nowrap text-xs sm:text-sm md:text-base px-2 sm:px-4">Experience</TabsTrigger>
+            <TabsTrigger value="education" className="flex-1 xl:w-full whitespace-nowrap text-xs sm:text-sm md:text-base px-2 sm:px-4">Education</TabsTrigger>
+            <TabsTrigger value="skills" className="flex-1 xl:w-full whitespace-nowrap text-xs sm:text-sm md:text-base px-2 sm:px-4">Skills</TabsTrigger>
+            <TabsTrigger value="about" className="flex-1 xl:w-full whitespace-nowrap text-xs sm:text-sm md:text-base px-2 sm:px-4">My Info</TabsTrigger>
           </TabsList>
 
           {/* content */}
-          <div className="min-h-[70vh] w-full">
+          <div className="min-h-[70vh] w-full overflow-x-hidden">
             {/* experience */}
             <TabsContent value="experience" className="w-full">
-              <div className="flex flex-col gap-[30px] text-center xl:text-left">
-                <h3 className="text-3xl font-bold xl:text-4xl">
+              <div className="flex flex-col gap-[20px] sm:gap-[30px] text-center xl:text-left">
+                <h3 className="text-2xl sm:text-3xl font-bold xl:text-4xl px-2">
                   <span style={{ color: 'var(--accent)' }}>{experience.title}</span>
                 </h3>
-                <p className="max-w-[600px] mx-auto xl:mx-0" style={{ color: 'var(--foreground)', opacity: 0.8 }}>
+                <p className="max-w-[600px] mx-auto xl:mx-0 text-sm sm:text-base px-2" style={{ color: 'var(--foreground)', opacity: 0.8 }}>
                   {experience.description}
                 </p>
-                <div className="h-auto">
+                <ScrollArea className="h-[600px] xl:h-auto">
                   <ul className="grid grid-cols-1 lg:grid-cols-2 gap-[30px]">
                     {experience.items.map((item, index) => {
                       return (
                         <li
                           key={index}
-                          className="h-[184px] py-6 px-10 rounded-xl flex flex-col justify-center items-center lg:items-start gap-1"
+                          className="min-h-[184px] py-6 px-6 sm:px-10 rounded-xl flex flex-col justify-center items-center lg:items-start gap-2"
                           style={{ backgroundColor: 'var(--secondary)' }}
                         >
-                          <span className="text-accent">{item.duration}</span>
-                          <h3 className="text-xl max-w-[260px] min-h-[60px] text-center lg:text-left" style={{ color: 'var(--foreground)' }}>
+                          <span className="text-accent text-sm sm:text-base">{item.duration}</span>
+                          <h3 className="text-lg sm:text-xl max-w-full min-h-[60px] text-center lg:text-left leading-tight" style={{ color: 'var(--foreground)' }}>
                             {item.position}
                           </h3>
                           <div className="flex items-center gap-3">
                             <span className="w-[6px] h-[6px] rounded-full bg-accent"></span>
-                            <p style={{ color: 'var(--foreground)', opacity: 0.8 }}>{item.company}</p>
+                            <p className="text-sm sm:text-base" style={{ color: 'var(--foreground)', opacity: 0.8 }}>{item.company}</p>
                           </div>
                         </li>
                       );
                     })}
                   </ul>
-                </div>
+                </ScrollArea>
               </div>
             </TabsContent>
 
