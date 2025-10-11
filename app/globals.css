@@ -151,39 +151,54 @@ body {
 }
 
 .social-twitter {
-  color: #1DA1F2 !important;
-  transition: color 0.3s ease;
+  color: #ffffff !important;
+  background-color: #1DA1F2 !important;
+  border-radius: 9999px;
+  padding: 8px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
 }
 
-/* Dark theme - only show colors on hover */
+/* Dark theme - show colored backgrounds with white icons */
 .dark .social-github {
   color: #ffffff !important;
-}
-.dark .social-github:hover {
-  color: #24292e !important;
-  background-color: #ffffff; /* ensure visibility on dark */
+  background-color: transparent;
   border-radius: 9999px;
+  padding: 8px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .dark .social-linkedin {
   color: #ffffff !important;
-}
-.dark .social-linkedin:hover {
-  color: #0077B5 !important;
+  background-color: #0077B5 !important;
+  border-radius: 9999px;
+  padding: 8px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .dark .social-instagram {
   color: #ffffff !important;
-}
-.dark .social-instagram:hover {
-  color: #E4405F !important;
+  background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%) !important;
+  border-radius: 9999px;
+  padding: 8px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .dark .social-twitter {
   color: #ffffff !important;
-}
-.dark .social-twitter:hover {
-  color: #1DA1F2 !important;
+  background-color: #1DA1F2 !important;
+  border-radius: 9999px;
+  padding: 8px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
 }
 
 /* Hide scrollbar */
