@@ -1,0 +1,16 @@
+# Ignore large video files - use external hosting instead
+/public/assets/*.mp4
+
+# Development files
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# IDE files
+.vscode/
+.idea/
+
+# OS files
+.DS_Store
+Thumbs.db

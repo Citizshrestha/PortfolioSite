@@ -107,6 +107,19 @@ const VideoWithFallback = ({ videoUrl, imageUrl, title }) => {
   const [hasError, setHasError] = useState(false);
   const [isLoading, setIsLoading] = useState(true);
 
+  useEffect(() => {
+    // Set a timeout to prevent infinite loading
+    const loadingTimeout = setTimeout(() => {
+      if (isLoading) {
+        console.log('Video loading timeout, showing fallback image');
+        setHasError(true);
+        setIsLoading(false);
+      }
+    }, 5000); // 5 second timeout
+
+    return () => clearTimeout(loadingTimeout);
+  }, [isLoading]);
+
   const handleError = () => {
     console.log('Video failed to load, showing fallback image');
     setHasError(true);
@@ -120,6 +133,28 @@ const VideoWithFallback = ({ videoUrl, imageUrl, title }) => {
   const handleCanPlay = () => {
     setIsLoading(false);
   };
+
+  // Check if we're in production (no local video files available)
+  const isProduction = typeof window !== 'undefined' && window.location.hostname !== 'localhost';
+
+  // If in production and video is a local file, show image immediately
+  if (isProduction && videoUrl.startsWith('/assets/') && videoUrl.endsWith('.mp4')) {
+    return (
+      <div 
+        className="relative w-full overflow-hidden rounded-lg shadow-2xl"
+        style={{ 
+          paddingBottom: "56.25%", // 16:9 aspect ratio
+          backgroundColor: "var(--secondary)"
+        }}
+      >
+        <img
+          src={imageUrl}
+          alt={title}
+          className="absolute top-0 left-0 object-cover w-full h-full"
+        />
+      </div>
+    );
+  }
 
   return (
     <div 
