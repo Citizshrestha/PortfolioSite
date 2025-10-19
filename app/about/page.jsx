@@ -25,7 +25,7 @@ const About = () => {
             </h2>
             
             <p className="leading-relaxed text-base xl:text-lg max-w-[800px] mb-4" style={{ color: 'var(--foreground)', opacity: 1 }}>
-              I'm a dedicated web developer with 1.5 years of experience specializing in creating 
+              I'm a dedicated web developer with 2 years of experience specializing in creating 
               dynamic, responsive, and visually stunning websites.
             </p>
             
