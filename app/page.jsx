@@ -21,9 +21,9 @@ const Home = () => {
              {/* btn and socials*/}
              <div className="flex flex-col items-center gap-8 xl:flex-row">
 
-                <Link href="/assets/resume/ResumeFolder/resume.pdf" download="Citiz_Shrestha_Resume.pdf" target="_blank">
+                <Link href="/assets/CV/CV.pdf" download="Citiz_Shrestha_Resume.pdf" target="_blank">
                   <Button variant="outline" size="lg" className="flex items-center gap-2 uppercase transition-all duration-300 border-accent text-accent hover:bg-accent hover:text-primary">
-                     <span>Download Resume</span>
+                     <span>Download CV</span>
                      <FiDownload className = "text-xl"/>
                   </Button>
                 </Link>
