@@ -8,12 +8,11 @@ import StairTransition from "@/components/StairTransition";
 import { ThemeProvider } from "@/components/ThemeProvider";
 
 
-const  jetbrainsMono= JetBrains_Mono({
+const jetbrainsMono = JetBrains_Mono({
   subsets: ["latin"],
-  weight: ["100", "200", "300", "400","500","600","700","800"],
+  weight: ["100", "200", "300", "400", "500", "600", "700", "800"],
   variable: '--font-jetbrainsMono',
   display: 'swap',
-  fallback: ['Monaco', 'Courier New', 'monospace'],
 });
 
 export const metadata = {
