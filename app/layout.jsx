@@ -1,4 +1,4 @@
-import { JetBrains_Mono } from "next/font/google";
+import localFont from "next/font/local";
 import "./globals.css";
 
 // components
@@ -8,9 +8,49 @@ import StairTransition from "@/components/StairTransition";
 import { ThemeProvider } from "@/components/ThemeProvider";
 
 
-const jetbrainsMono = JetBrains_Mono({
-  subsets: ["latin"],
-  weight: ["100", "200", "300", "400", "500", "600", "700", "800"],
+const jetbrainsMono = localFont({
+  src: [
+    {
+      path: '../public/assets/fonts/JetBrainsMono-Thin.woff2',
+      weight: '100',
+      style: 'normal',
+    },
+    {
+      path: '../public/assets/fonts/JetBrainsMono-ExtraLight.woff2',
+      weight: '200',
+      style: 'normal',
+    },
+    {
+      path: '../public/assets/fonts/JetBrainsMono-Light.woff2',
+      weight: '300',
+      style: 'normal',
+    },
+    {
+      path: '../public/assets/fonts/JetBrainsMono-Regular.woff2',
+      weight: '400',
+      style: 'normal',
+    },
+    {
+      path: '../public/assets/fonts/JetBrainsMono-Medium.woff2',
+      weight: '500',
+      style: 'normal',
+    },
+    {
+      path: '../public/assets/fonts/JetBrainsMono-SemiBold.woff2',
+      weight: '600',
+      style: 'normal',
+    },
+    {
+      path: '../public/assets/fonts/JetBrainsMono-Bold.woff2',
+      weight: '700',
+      style: 'normal',
+    },
+    {
+      path: '../public/assets/fonts/JetBrainsMono-ExtraBold.woff2',
+      weight: '800',
+      style: 'normal',
+    },
+  ],
   variable: '--font-jetbrainsMono',
   display: 'swap',
 });
@@ -24,7 +64,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en" suppressHydrationWarning>
       <body
-        className={`${jetbrainsMono.variable}`}
+        className={`${jetbrainsMono.variable} font-primary`}
         suppressHydrationWarning
       >
         <ThemeProvider>

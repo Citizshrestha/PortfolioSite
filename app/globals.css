@@ -132,7 +132,8 @@ section {
 }
 
 body {
-  @apply leading-loose transition-colors duration-300 font-primary;
+  @apply leading-loose transition-colors duration-300;
+  font-family: var(--font-jetbrainsMono), 'JetBrains Mono Fallback', 'Consolas', 'Monaco', 'Courier New', monospace;
   background-color: var(--background);
   color: var(--foreground);
 }
