@@ -3,6 +3,14 @@
 
 @custom-variant dark (&:is(.dark *));
 
+/* Fallback font loading in case Google Fonts fails */
+@font-face {
+  font-family: 'JetBrains Mono Fallback';
+  src: local('Consolas'), local('Monaco'), local('Courier New'), local('monospace');
+  font-weight: 100 800;
+  font-style: normal;
+}
+
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
@@ -114,6 +122,14 @@
 }
 
 @layer base {
+
+html {
+  scroll-behavior: smooth;
+}
+
+section {
+  scroll-margin-top: 100px;
+}
 
 body {
   @apply leading-loose transition-colors duration-300 font-primary;

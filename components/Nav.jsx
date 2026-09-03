@@ -1,36 +1,68 @@
 // components/Nav.tsx
 "use client";
 
-import Link from "next/link";
-import { usePathname } from "next/navigation";
+import { useState, useEffect } from "react";
 
 const links = [
-  { name: "home", path: "/" },
-  { name: "about me", path: "/about" },
-  { name: "resume", path: "/resume" },
-  { name: "work", path: "/work" },
-  { name: "contact", path: "/contacts" },
+  { name: "home", path: "#home" },
+  { name: "about me", path: "#about" },
+  { name: "resume", path: "#resume" },
+  { name: "work", path: "#work" },
+  { name: "contact", path: "#contact" },
 ];
 
 const Nav = () => {
-  const pathname = usePathname();
+  const [activeSection, setActiveSection] = useState("home");
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const sections = links.map(link => link.path.slice(1));
+      const scrollPosition = window.scrollY + 100;
+
+      for (const section of sections) {
+        const element = document.getElementById(section);
+        if (element) {
+          const { offsetTop, offsetHeight } = element;
+          if (scrollPosition >= offsetTop && scrollPosition < offsetTop + offsetHeight) {
+            setActiveSection(section);
+            break;
+          }
+        }
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    handleScroll();
+
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+  const handleClick = (e, path) => {
+    e.preventDefault();
+    const targetId = path.slice(1);
+    const element = document.getElementById(targetId);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  };
 
   return (
     <nav className="flex gap-8">
       {links.map((link, index) => (
-        <Link
+        <a
           href={link.path}
           key={index}
-          className="capitalize font-medium transition-colors duration-300 border-b-2"
+          onClick={(e) => handleClick(e, link.path)}
+          className="capitalize font-medium transition-colors duration-300 border-b-2 cursor-pointer"
           style={{
-            color: link.path === pathname ? 'var(--accent)' : 'var(--foreground)',
-            borderColor: link.path === pathname ? 'var(--accent)' : 'transparent'
+            color: activeSection === link.path.slice(1) ? 'var(--accent)' : 'var(--foreground)',
+            borderColor: activeSection === link.path.slice(1) ? 'var(--accent)' : 'transparent'
           }}
           onMouseEnter={(e) => e.target.style.color = 'var(--accent)'}
-          onMouseLeave={(e) => e.target.style.color = link.path === pathname ? 'var(--accent)' : 'var(--foreground)'}
+          onMouseLeave={(e) => e.target.style.color = activeSection === link.path.slice(1) ? 'var(--accent)' : 'var(--foreground)'}
         >
           {link.name}
-        </Link>
+        </a>
       ))}
     </nav>
   );
