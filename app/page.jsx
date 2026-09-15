@@ -142,26 +142,6 @@ const VideoWithFallback = ({ videoUrl, imageUrl, title }) => {
     setIsLoading(false);
   };
 
-  const isProduction = typeof window !== 'undefined' && window.location.hostname !== 'localhost';
-
-  if (isProduction && videoUrl.startsWith('/assets/') && videoUrl.endsWith('.mp4')) {
-    return (
-      <div
-        className="relative w-full overflow-hidden rounded-lg shadow-2xl"
-        style={{
-          paddingBottom: "56.25%",
-          backgroundColor: "var(--secondary)"
-        }}
-      >
-        <img
-          src={imageUrl}
-          alt={title}
-          className="absolute top-0 left-0 object-cover w-full h-full"
-        />
-      </div>
-    );
-  }
-
   return (
     <div
       className="relative w-full overflow-hidden rounded-lg shadow-2xl"
