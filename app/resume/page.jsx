@@ -54,14 +54,14 @@ const experience = {
   description: "Building responsive and animated web experiences with modern technologies.",
   items: [
     {
-      company: "Freelance",
-      position: "Frontend Web Developer",
-      duration: "2023 - Present",
+      company: "NwTech Nepal",
+      position: "Project Lead & Full-Stack Developer Intern",
+      duration: "Oct 2025 - Jan 2026",
     },
     {
-      company: "Personal Projects",
+      company: "deessa Foundation (Remote)",
       position: "Full-Stack Developer",
-      duration: "2022 - Present",
+      duration: "2026 - Present",
     },
   ],
 };
@@ -75,17 +75,17 @@ const education = {
     {
       institution: "Oxford College of Engineering and Management",
       degree: "Bachelor in Computer Application (BCA)",
-      duration: "2023 - Present",
+      duration: "2022 - 2026",
     },
     {
       institution: "Aroma College",
       degree: "Higher Secondary Education - Science",
-      duration: "2021 - 2022",
+      duration: "2020 - 2021",
     },
     {
       institution: "Continental English Boarding School",
       degree: "Secondary Education (SEE)",
-      duration: "2020",
+      duration: "2019",
     },
   ],
 };

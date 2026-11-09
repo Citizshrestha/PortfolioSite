@@ -201,14 +201,14 @@ const experience = {
   description: "Building responsive and animated web experiences with modern technologies.",
   items: [
     {
-      company: "Freelance",
-      position: "Frontend Web Developer",
-      duration: "2023 - Present",
+      company: "NwTech Nepal",
+      position: "Project Lead & Full-Stack Developer Intern",
+      duration: "Oct 2025 - Jan 2026",
     },
     {
-      company: "Personal Projects",
+      company: "deessa Foundation (Remote)",
       position: "Full-Stack Developer",
-      duration: "2022 - Present",
+      duration: "2026 - Present",
     },
   ],
 };
@@ -220,17 +220,17 @@ const education = {
     {
       institution: "Oxford College of Engineering and Management",
       degree: "Bachelor in Computer Application (BCA)",
-      duration: "2023 - Present",
+      duration: "2022 - 2026",
     },
     {
       institution: "Aroma College",
       degree: "Higher Secondary Education - Science",
-      duration: "2021 - 2022",
+      duration: "2020 - 2021",
     },
     {
       institution: "Continental English Boarding School",
       degree: "Secondary Education (SEE)",
-      duration: "2020",
+      duration: "2019",
     },
   ],
 };
@@ -395,9 +395,9 @@ const Home = () => {
               </p>
 
               <div className="flex flex-col items-center gap-8 xl:flex-row">
-                <Link href="/assets/CV/CV.pdf" download="Citiz_Shrestha_Resume.pdf" target="_blank">
+                <Link href="/assets/resume/Citiz_Shrestha_Resume.pdf" download="Citiz_Shrestha_Resume.pdf" target="_blank">
                   <Button variant="outline" size="lg" className="flex items-center gap-2 uppercase transition-all duration-300 border-accent text-accent hover:bg-accent hover:text-primary">
-                    <span>Download CV</span>
+                    <span>Download Resume</span>
                     <FiDownload className="text-xl"/>
                   </Button>
                 </Link>
@@ -443,7 +443,7 @@ const Home = () => {
                 </p>
 
                 <p className="leading-relaxed text-base xl:text-lg" style={{ color: 'var(--foreground)', opacity: 0.9 }}>
-                  My expertise spans <span style={{ color: 'var(--accent)', fontWeight: '600' }}>JavaScript, React, GSAP, Framer-Motion and Locomotive JS</span> for
+                  My expertise spans <span style={{ color: 'var(--accent)', fontWeight: '600' }}>JavaScript, React and Java</span> for
                   frontend development, while currently expanding my skills in backend technologies like <span style={{ color: 'var(--accent)', fontWeight: '600' }}>Node.js
                   and Express.js</span> to become a well-rounded full-stack developer.
                 </p>

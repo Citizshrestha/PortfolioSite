@@ -28,7 +28,7 @@ const About = () => {
             </p>
 
             <p className="leading-relaxed text-lg xl:text-2xl" style={{ color: 'var(--foreground)', opacity: 0.9 }}>
-              My expertise spans <span style={{ color: 'var(--accent)', fontWeight: '600' }}>JavaScript, React, GSAP, Framer-Motion and Locomotive JS</span> for
+              My expertise spans <span style={{ color: 'var(--accent)', fontWeight: '600' }}>JavaScript, React and Java</span> for
               frontend development, while currently expanding my skills in backend technologies like <span style={{ color: 'var(--accent)', fontWeight: '600' }}>Node.js
               and Express.js</span> to become a well-rounded full-stack developer.
             </p>
