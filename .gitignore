@@ -41,3 +41,11 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# local files
+.claude/
+.vscode/
+AGENTS.md
+CLAUDE.md
+Citiz_Shrestha_Updated_CV.pdf
+dev-server.log
